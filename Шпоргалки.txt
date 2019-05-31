@@ -1,0 +1,33 @@
+Переменные:
+	var 	message;
+	let 	message;
+	
+Константа:
+	const 	message;
+	
+Объект:
+	var messages = {message1,
+					message2
+	};		
+	
+	messages.message1 = "Hello"; //Присвоение содержимого объекта определенного значения
+
+Вывод сообщения в браузер:
+	alert("Сообщение");
+	
+Вывод окна лоя ввода текста:
+	prompt("Введите текст");
+	
+Вывод в консоль браузера:
+	console.log("Сообщение");
+	
+Условия:
+	if (4+4 == 8){
+			console.log("Correct!")
+	}
+	
+	if (2+2 == 8){
+		console.log("Correct!")
+	} else {
+		console.log("InCorrect!")
+	}
