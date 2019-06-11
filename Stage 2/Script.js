@@ -1,5 +1,5 @@
-var     money = +prompt("Ваш бюджет на месяц?", ""),
-        time = prompt("Введите дату в формате YYYY-MM-DD", "");
+var money = +prompt("Ваш бюджет на месяц?", ""),
+    time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
 var appData = {
     budget: money,
@@ -10,20 +10,60 @@ var appData = {
     savinvings: false
 };
 
+// Цикл FOR:
+// for (var i=0; i < 2; i++) {
+//     var a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+//         b = prompt("Во сколько обойдется?", "");
 
-for (var i=0; i < 2; i++) {
+//     if ((typeof (a)) === "string" && ((typeof (a)) != null) && ((typeof (b)) != null)
+//         && a != "" && b != "" && a.length < 50) {
+//         console.log ("done");
+//         appData.expenses[a] = b;
+//     }    
+
+// }
+
+// // Цикл WHILE:
+// var i = 0;
+// while (i < 2) {
+//     var a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+//         b = prompt("Во сколько обойдется?", "");
+
+//     if ((typeof (a)) === "string" && ((typeof (a)) != null) && ((typeof (b)) != null) &&
+//         a != "" && b != "" && a.length < 50) {
+//         console.log("Done");
+//         appData.expenses[a] = b;
+//     } else if (a.length > 50) {
+//         alert("Значение больше 50!");
+//         i--;
+//     } else if (typeof (a) === "string") {
+//         alert("Введите число!");
+//         i--;
+//     }
+//     i++;
+// }
+
+// Цикл DO WHILE:
+var i = 0;
+do {
     var a = prompt("Введите обязательную статью расходов в этом месяце", ""),
         b = prompt("Во сколько обойдется?", "");
-    
-    if ((typeof (a)) === "string" && ((typeof (a)) != null) && ((typeof (b)) != null)
-        && a != "" && b != "" && a.length < 50) {
-        console.log ("done");
-        appData.expenses[a] = b;
-    }    
-    
-};
 
-appData.moneyPerDay = appData.budget/30;
+    if ((typeof (a)) === "string" && ((typeof (a)) != null) && ((typeof (b)) != null) &&
+        a != "" && b != "" && a.length < 50) {
+        console.log("Done");
+        appData.expenses[a] = b;
+    } else if (a.length > 50) {
+        alert("Значение больше 50!");
+        i--;
+    } else if (typeof (a) === "string") {
+        alert("Введите число!");
+        i--;
+    }
+    i++;
+} while (i < 2);
+
+appData.moneyPerDay = appData.budget / 30;
 
 alert("Ваш бюджет на день составляет: " + appData.moneyPerDay);
 
